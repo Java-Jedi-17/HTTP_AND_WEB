@@ -6,7 +6,6 @@ public class Main {
     private static final int poolSizeThreads = 64;
 
     public static void main(String[] args) throws InterruptedException {
-
         Server server = new Server(SERVER_SOCKET, poolSizeThreads);
         server.addHandler("GET", "/messages", ((request, responseStream) -> {
             try {
